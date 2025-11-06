@@ -1,118 +1,131 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="el">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kerkétio Guesthouse</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-
   <style>
-    :root{
-      --gold: #c8a02f;
-      --bg: #fffaf5;
-      --text: #222;
-      --muted: #555;
-      --maxw: 980px;
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background-color: #faf8f3;
+      color: #333;
+      text-align: center;
     }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family: "Inter", system-ui, sans-serif;
-      color:var(--text);
-      background:linear-gradient(0deg,#fff,#fffaf8);
-      padding:18px;
-      display:flex;
-      justify-content:center;
+
+    header {
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 15px;
     }
-    .wrap{width:100%;max-width:var(--maxw);}
-    header{display:flex;align-items:center;gap:12px;margin-bottom:16px;}
-    .logo{font-family:"Great Vibes",cursive;font-size:38px;color:var(--gold);}
-    .sub{font-size:13px;color:var(--muted);margin-top:4px;}
-    .card{
-      background:white;border-radius:14px;
-      box-shadow:0 6px 18px rgba(18,20,24,0.06);
-      padding:14px;margin-bottom:14px;
+
+    header img {
+      width: 180px;
+      height: auto;
     }
-    .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;}
-    .gallery img{width:100%;height:150px;object-fit:cover;border-radius:8px;}
-    @media(min-width:720px){
-      .gallery{grid-template-columns:repeat(3,1fr)}
-      .gallery img{height:200px}
-      .logo{font-size:44px}
+
+    .slider {
+      position: relative;
+      max-width: 100%;
+      overflow: hidden;
     }
-    .row{display:flex;gap:10px;align-items:center;flex-wrap:wrap;}
-    .btn{
-      display:inline-flex;gap:8px;align-items:center;
-      padding:10px 14px;border-radius:10px;
-      text-decoration:none;font-weight:600;font-size:15px;
+
+    .slides img {
+      width: 100%;
+      height: auto;
+      display: none;
     }
-    .btn-primary{
-      background:linear-gradient(180deg,var(--gold),#b07f24);
-      color:#fff;box-shadow:0 6px 14px rgba(200,154,48,0.18);
+
+    .slides img.active {
+      display: block;
     }
-    .btn-ghost{background:transparent;border:1px solid #eee;color:var(--muted);}
-    .section-title{font-weight:600;margin:6px 0 10px 0;}
-    .info-list{display:grid;gap:8px;}
-    .info-item{font-size:14px;color:var(--muted);}
-    .map-wrap{width:100%;height:240px;border-radius:10px;overflow:hidden;background:#eee;}
-    footer{text-align:center;margin-top:8px;color:var(--muted);font-size:13px;}
+
+    .info {
+      padding: 20px;
+    }
+
+    .info h1 {
+      font-size: 26px;
+      color: #b4933a;
+      margin-bottom: 10px;
+    }
+
+    .buttons a {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 24px;
+      background-color: #b4933a;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .buttons a:hover {
+      background-color: #d8b64c;
+    }
+
+    footer {
+      margin-top: 40px;
+      background-color: #f4f1ea;
+      padding: 15px;
+      font-size: 14px;
+    }
+
+    .contact p {
+      margin: 5px 0;
+    }
+
+    .contact a {
+      color: #b4933a;
+      text-decoration: none;
+      font-weight: 500;
+    }
   </style>
 </head>
+
 <body>
-  <div class="wrap">
-    <header>
-      <div>
-        <div class="logo">Kerkétio Guesthouse</div>
-        <div class="sub">Ζεστή φιλοξενία στα Τρίκαλα</div>
-      </div>
-    </header>
+  <header>
+    <img src="logo.png" alt="Kerkétio Guesthouse Logo" />
+  </header>
 
-    <section class="card">
-      <div class="section-title">Φωτογραφίες</div>
-      <div class="gallery">
-        <img src="photo1.jpg" alt="Φωτογραφία 1">
-        <img src="photo2.jpg" alt="Φωτογραφία 2">
-        <img src="photo3.jpg" alt="Φωτογραφία 3">
-        <img src="photo4.jpg" alt="Φωτογραφία 4">
-        <img src="photo5.jpg" alt="Φωτογραφία 5">
-      </div>
-
-      <div style="margin-top:12px" class="row">
-        <a class="btn btn-primary" href="https://www.airbnb.gr/rooms/1536342776795979785?viralityEntryPoint=1&s=76" target="_blank">Κάνε κράτηση</a>
-        <a class="btn btn-ghost" href="https://maps.app.goo.gl/zNzR3v43SkoQctFS9" target="_blank">Δες τοποθεσία</a>
-      </div>
-    </section>
-
-    <section class="card">
-      <div class="section-title">Περιγραφή</div>
-      <p>Το Kerkétio Guesthouse προσφέρει μια ζεστή, αυθεντική εμπειρία φιλοξενίας στα Τρίκαλα. Ιδανικό για χαλάρωση, απόδραση στη φύση και απόλαυση παραδοσιακής αρχιτεκτονικής.</p>
-    </section>
-
-    <section class="card">
-      <div class="section-title">Τοποθεσία</div>
-      <div class="map-wrap">
-        <iframe 
-          src="https://www.google.com/maps?q=zNzR3v43SkoQctFS9&output=embed"
-          width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy">
-        </iframe>
-      </div>
-    </section>
-
-    <section class="card">
-      <div class="section-title">Πληροφορίες</div>
-      <div class="info-list">
-        <div class="info-item">Τηλέφωνο: <a href="tel:+306942545326">694 254 5326</a></div>
-        <div class="info-item">Check-in: 14:00 — Check-out: 11:00</div>
-        <div class="info-item">Παροχές: Wi-Fi, Κουζίνα, Θέρμανση, Καθαριότητα</div>
-      </div>
-    </section>
-
-    <footer>© <span id="year"></span> Kerkétio Guesthouse</footer>
+  <div class="slider">
+    <div class="slides">
+      <img src="photo1.jpg" alt="Φωτογραφία 1" class="active">
+      <img src="photo2.jpg" alt="Φωτογραφία 2">
+      <img src="photo3.jpg" alt="Φωτογραφία 3">
+    </div>
   </div>
 
+  <div class="info">
+    <h1>Kerkétio Guesthouse</h1>
+    <p>Ένα ζεστό και φιλόξενο κατάλυμα στους πρόποδες του Κερκητίου Όρους.</p>
+
+    <div class="buttons">
+      <a href="https://maps.app.goo.gl/NRfBnuQmQQX2WRnX9" target="_blank">📍 Δες τοποθεσία</a>
+      <a href="tel:+306942545326">📞 Κάλεσε μας</a>
+      <a href="mailto:geodooom@gmail.com">✉️ Στείλε email</a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="contact">
+      <p>Τηλέφωνο: <a href="tel:+306942545326">694 254 5326</a></p>
+      <p>Email: <a href="mailto:geodooom@gmail.com">geodooom@gmail.com</a></p>
+      <p><a href="https://maps.app.goo.gl/NRfBnuQmQQX2WRnX9" target="_blank">Τοποθεσία στο Google Maps</a></p>
+    </div>
+    <p>© 2025 Kerkétio Guesthouse. All rights reserved.</p>
+  </footer>
+
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+    let current = 0;
+    const images = document.querySelectorAll(".slides img");
+    setInterval(() => {
+      images[current].classList.remove("active");
+      current = (current + 1) % images.length;
+      images[current].classList.add("active");
+    }, 4000);
   </script>
 </body>
 </html>
