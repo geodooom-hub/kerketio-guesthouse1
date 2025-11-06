@@ -27,7 +27,7 @@
     }
     .wrap{width:100%;max-width:var(--maxw);}
     header{display:flex;align-items:center;gap:12px;margin-bottom:16px;}
-    .logo{font-family:"Great Vibes",cursive;font-size:34px;color:var(--gold);}
+    .logo{font-family:"Great Vibes",cursive;font-size:38px;color:var(--gold);}
     .sub{font-size:13px;color:var(--muted);margin-top:4px;}
     .card{
       background:white;border-radius:14px;
@@ -39,7 +39,7 @@
     @media(min-width:720px){
       .gallery{grid-template-columns:repeat(3,1fr)}
       .gallery img{height:200px}
-      .logo{font-size:42px}
+      .logo{font-size:44px}
     }
     .row{display:flex;gap:10px;align-items:center;flex-wrap:wrap;}
     .btn{
@@ -70,42 +70,41 @@
 
     <section class="card">
       <div class="section-title">Φωτογραφίες</div>
-
       <div class="gallery">
-        <!-- 🔸ΒΑΛΕ ΕΔΩ ΤΙΣ ΦΩΤΟΓΡΑΦΙΕΣ ΣΟΥ -->
-        <!-- Παράδειγμα:
-        <img src="photo1.jpg" alt="">
-        <img src="photo2.jpg" alt="">
-        -->
+        <img src="photo1.jpg" alt="Φωτογραφία 1">
+        <img src="photo2.jpg" alt="Φωτογραφία 2">
+        <img src="photo3.jpg" alt="Φωτογραφία 3">
+        <img src="photo4.jpg" alt="Φωτογραφία 4">
+        <img src="photo5.jpg" alt="Φωτογραφία 5">
       </div>
 
       <div style="margin-top:12px" class="row">
         <a class="btn btn-primary" href="https://www.airbnb.gr/rooms/1536342776795979785?viralityEntryPoint=1&s=76" target="_blank">Κάνε κράτηση</a>
-        <a class="btn btn-ghost" href="https://maps.app.goo.gl/VKsaZhUvy4EmWGm29" target="_blank">Δες τοποθεσία</a>
+        <a class="btn btn-ghost" href="https://maps.app.goo.gl/zNzR3v43SkoQctFS9" target="_blank">Δες τοποθεσία</a>
       </div>
     </section>
 
     <section class="card">
       <div class="section-title">Περιγραφή</div>
-      <p>Παραδοσιακό κατάλυμα με σύγχρονες ανέσεις, ιδανικό για ξεκούραση και απόδραση στη φύση. Απολαύστε άνεση, καθαριότητα και φιλόξενη ατμόσφαιρα.</p>
+      <p>Το Kerkétio Guesthouse προσφέρει μια ζεστή, αυθεντική εμπειρία φιλοξενίας στα Τρίκαλα. Ιδανικό για χαλάρωση, απόδραση στη φύση και απόλαυση παραδοσιακής αρχιτεκτονικής.</p>
     </section>
 
     <section class="card">
       <div class="section-title">Τοποθεσία</div>
       <div class="map-wrap">
-        <!-- 🔸ΒΑΛΕ ΕΔΩ ΤΟ iframe ΑΠΟ GOOGLE MAPS -->
-        <!-- Παράδειγμα:
-        <iframe src="https://www.google.com/maps/embed?..." width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy"></iframe>
-        -->
+        <iframe 
+          src="https://www.google.com/maps?q=zNzR3v43SkoQctFS9&output=embed"
+          width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy">
+        </iframe>
       </div>
     </section>
 
     <section class="card">
       <div class="section-title">Πληροφορίες</div>
       <div class="info-list">
-        <div class="info-item">Τηλέφωνο: +30 ___ ___ ____</div>
+        <div class="info-item">Τηλέφωνο: <a href="tel:+306942545326">694 254 5326</a></div>
         <div class="info-item">Check-in: 14:00 — Check-out: 11:00</div>
-        <div class="info-item">Wi-Fi, Κουζίνα, Θέρμανση, Καθαριότητα</div>
+        <div class="info-item">Παροχές: Wi-Fi, Κουζίνα, Θέρμανση, Καθαριότητα</div>
       </div>
     </section>
 
